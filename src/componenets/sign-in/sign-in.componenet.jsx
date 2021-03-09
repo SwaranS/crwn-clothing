@@ -1,8 +1,8 @@
 import React from "react";
-import FormInput from "../../../componenets/form-input/form-input.componenet";
-import CustomButton from "../../custom-button/custom-button.componenet";
+import FormInput from "../form-input/form-input.componenet";
+import CustomButton from "../custom-button/custom-button.componenet";
 
-import {signInWithGoogle} from "../../../componenets/firebase/firebase.utils";
+import {signInWithGoogle} from "../../firebase/firebase.utils";
 
 import "./sign-in.styles.scss";
 

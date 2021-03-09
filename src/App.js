@@ -7,7 +7,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import Header from './componenets/header/header.component';
 import {
   auth,
-  createUserProfileDocumet,
+  createUserProfileDocument,
 } from "./firebase/firebase.utils";
 
 import "./App.css";
@@ -25,7 +25,7 @@ class App extends React.Component {
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
-        const userRef = await createUserProfileDocumet(userAuth);
+        const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot((snapShot) => {
           this.setState({
             currentUser: {

@@ -11,6 +11,7 @@ import {
 } from "./firebase/firebase.utils";
 
 import "./App.css";
+import Users from "./componenets/users/user.componenet";
 
 class App extends React.Component {
   constructor() {
@@ -53,6 +54,7 @@ class App extends React.Component {
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
           <Route path="/signin" component={SignInAndSignUpPage} />
+          <Route path="/users/:userId" component={Users} userId={this.state.currentUser}/>
         </Switch>
       </div>
     );
